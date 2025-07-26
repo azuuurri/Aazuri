@@ -1,23 +1,29 @@
-import type { Metadata } from 'next'
+import './globals.css'
 import { GeistSans } from 'geist/font/sans'
 import { GeistMono } from 'geist/font/mono'
-import './globals.css'
-
-export const metadata: Metadata = {
-  title: 'Chibitsu',
-  description: 'Your new buddies on the blockchain.',
-  generator: 'Chibitsu',
-}
+import Head from 'next/head'
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode
-}>) {
+}) {
   return (
-    <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable}`}>
-      <body>{children}</body>
+    <html lang="en">
+      <Head>
+        <title>Chibitsu</title>
+        <meta name="description" content="Your new buddies on the blockchain." />
+        <meta name="generator" content="v0.dev" />
+      </Head>
+      <body
+        style={{
+          fontFamily: GeistSans.style.fontFamily,
+          ['--font-sans' as any]: GeistSans.variable,
+          ['--font-mono' as any]: GeistMono.variable,
+        }}
+      >
+        {children}
+      </body>
     </html>
   )
 }
-
