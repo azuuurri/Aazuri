@@ -6,7 +6,8 @@ import { Card, CardContent } from "@/components/ui/card"
 import { MessageCircle, Twitter, ChevronDown } from "lucide-react"
 import Image from "next/image"
 
-export default function BlockBuddiesLanding() {
+ChibitsuLanding.tsx
+
   const [scrollY, setScrollY] = useState(0)
 
   useEffect(() => {
@@ -182,7 +183,8 @@ export default function BlockBuddiesLanding() {
       {/* Footer */}
       <footer className="py-8 px-4 bg-gray-900 border-t border-gray-800">
         <div className="max-w-4xl mx-auto text-center">
-          <p className="text-gray-400">© 2024 BlockBuddies. All rights reserved.</p>
+        <p className="text-gray-400">© 2024 Chibitsu. All rights reserved.</p>
+
         </div>
       </footer>
 
