@@ -6,9 +6,8 @@ import './globals.css'
 export const metadata: Metadata = {
   title: 'Chibitsu',
   description: 'Your new buddies on the blockchain.',
-  generator: 'v0.dev',
+  generator: 'Chibitsu',
 }
-
 
 export default function RootLayout({
   children,
@@ -16,17 +15,9 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <head>
-        <style>{`
-html {
-  font-family: ${GeistSans.style.fontFamily};
-  --font-sans: ${GeistSans.variable};
-  --font-mono: ${GeistMono.variable};
-}
-        `}</style>
-      </head>
+    <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable}`}>
       <body>{children}</body>
     </html>
   )
 }
+
